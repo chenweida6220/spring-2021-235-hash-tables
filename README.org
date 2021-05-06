@@ -1,0 +1,75 @@
+* Fall 2021 235 Hash Tables
+
+* Last name:
+
+* First name:
+
+* GitHub username:
+
+* Notes:
+
+Due date: Thursday May 20th 7:00am
+
+
+* General instructions:
+- Fill in your name and GitHub username on top.
+
+** Requirements
+- You will need a Makefile with at least 2 targets: *main* and
+  *tests*. The *main* target should build an executable named main and
+  *tests* should build a doctest.h based test executable that I'll run
+  to test the projects. 
+- Put tests in in *tests.cpp* that show that everything works.
+- Basically you are completing this like you completed last semesters
+  labs. 
+- The repo has doctest.h, a sample (but incomplete) Makefile, and
+  basic linked list started code. You can change or remove any of
+  these (although you still need doctest.h and some Makefile).
+
+
+
+* Part 1 - Implementing the has table.
+
+Implement an open hash table data structure. To do so create a class
+named *HTable*. Your hash table should create an array of Linked
+Lists. Your hash table should store strings in the linked lists. 
+
+** Implement the following functionality
+
+- Constructors: a default constructor and one that allows you to
+  specify the size of the array
+- hash: a method that accepts a string and returns a number using a
+  hash function. You can use one of the hash functions discussed here:
+  https://opendsa-server.cs.vt.edu/ODSA/Books/CS3/html/HashFuncExamp.html
+
+- insert: a routine to insert a string into the hash table. If the
+  linked list at the required cell (indicated by the hash function) is
+  null, start a new linked list at that cell. If not, add a new node
+  to the front of the list. If the specific string is already in the
+  list you can insert it again. You can use this along with our Linked
+  List length function to help test your insert routine.
+
+- has_key: given a string, search to see if that key is in the hash
+  table. This method should return a boolean value.
+
+Note: Make sure you fully test this via doctests and the tests
+target. Feel free to add additional functions and/or change the base
+code as needed.
+
+** Hash function and size testing
+
+Once you have completed your HTable class run a series of tests. Run a
+bunch of insertions and retrievals from generated data on HTables with
+different array sizes and using different hash functions.
+
+Try making the hash table ridiculously small, then really big, then
+maybe a bit bigger than your key set size. With these try a few hash
+functions. You can use both functions from the above site and also
+from here:
+
+http://cseweb.ucsd.edu/~kube/cls/100/Lectures/lec16/lec16-12.html
+
+Write up what you discover w/r to hash table size and hash functions 
+in the section below and push to GitHub.
+
+* Has Table Experiments Results
