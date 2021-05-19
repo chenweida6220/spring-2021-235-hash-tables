@@ -1,10 +1,10 @@
 * Fall 2021 235 Hash Tables
 
-* Last name:
+* Last name: Chen
 
-* First name:
+* First name: Wei Da
 
-* GitHub username:
+* GitHub username: chenweida6220
 
 * Notes:
 
@@ -18,21 +18,21 @@ Due date: Thursday May 20th 7:00am
 - You will need a Makefile with at least 2 targets: *main* and
   *tests*. The *main* target should build an executable named main and
   *tests* should build a doctest.h based test executable that I'll run
-  to test the projects. 
+  to test the projects.
 - Put tests in in *tests.cpp* that show that everything works.
 - Basically you are completing this like you completed last semesters
-  labs. 
+  labs.
 - The repo has doctest.h, a sample (but incomplete) Makefile, and
   basic linked list started code. You can change or remove any of
   these (although you still need doctest.h and some Makefile).
 
 
 
-* Part 1 - Implementing the has table.
+* Part 1 - Implementing the hash table.
 
 Implement an open hash table data structure. To do so create a class
 named *HTable*. Your hash table should create an array of Linked
-Lists. Your hash table should store strings in the linked lists. 
+Lists. Your hash table should store strings in the linked lists.
 
 ** Implement the following functionality
 
@@ -69,7 +69,7 @@ from here:
 
 http://cseweb.ucsd.edu/~kube/cls/100/Lectures/lec16/lec16-12.html
 
-Write up what you discover w/r to hash table size and hash functions 
+Write up what you discover w/r to hash table size and hash functions
 in the section below and push to GitHub.
 
-* Has Table Experiments Results
+* Hash Table Experiments Results

@@ -5,7 +5,11 @@
 
 List::List(){
   head = nullptr;
-  
+
+}
+
+Node* List::getHead() {
+  return head;
 }
 
 void List::insert(std::string data){
@@ -24,9 +28,9 @@ std::string List::toString(){
   while (walker != nullptr){
     s = s + walker->getData() + "-->";
     walker = walker->getNext();
-    
+
   }
   s=s+"nullptr";
   return s;
-  
+
 }
