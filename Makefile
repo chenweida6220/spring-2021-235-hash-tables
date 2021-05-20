@@ -21,4 +21,4 @@ Node.o: Node.cpp Node.h
 
 
 clean:
-	rm -f $(OBJECTS) main tests a.out
+	rm -f $(OBJECTS) main tests a.out *.o

@@ -73,3 +73,8 @@ Write up what you discover w/r to hash table size and hash functions
 in the section below and push to GitHub.
 
 * Hash Table Experiments Results
+- Hash tables with a large size variables will contain nullptr (empty).
+- With larger hash table sizes, there are less collisions of hash indices as there is more space.
+- Hash tables that are too big will return a segmentation fault while hash tables with size 0
+will return a floating point exception.
+- Hash tables are known for their efficiency in speed so runtime is primarily dependent on size of the tables.
