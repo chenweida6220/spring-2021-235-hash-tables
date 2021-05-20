@@ -1,23 +1,24 @@
-OBJECTS=main.o List.o Node.o
+OBJECTS=List.o Node.o HTable.o
 CXXFLAGS=
 LDFLAGS=
 CXX=g++
 
-main: main.o List.o Node.o
-	$(CXX) -o main $(OBJECTS)
+main: main.o $(OBJECTS)
+	$(CXX) -o main main.o $(OBJECTS)
 
-tests: test.o
-	g++ -o tests tests.o
+tests: tests.o $(OBJECTS)
+	$(CXX) -o tests tests.o $(OBJECTS)
 
-tests.o: tests.cpp doctest.h
-	g++ -c tests.cpp
+tests.o:  tests.cpp doctest.h List.h HTable.h
 
-main.o: main.cpp List.h
+main.o: main.cpp List.h HTable.h
 
 List.o: List.cpp List.h Node.h
+
+HTable.o: HTable.cpp HTable.h
 
 Node.o: Node.cpp Node.h
 
 
 clean:
-	rm -f $(OBJECTS)
+	rm -f $(OBJECTS) main tests a.out

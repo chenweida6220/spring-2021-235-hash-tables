@@ -28,24 +28,22 @@ int HTable::hash(string str) {
 
 void HTable::insert(string str) {
   if (table[hash(str)] == nullptr) {
-    table[hash(str)] == new List[];
+    table[hash(str)] = new List();
   }
 
   table[hash(str)]->insert(str);
 }
 
 bool HTable::has_key(string str) {
-  if (table[hash(str)] == nullptr || table[hash(str)].getHead() == nullptr) {
+  if (table[hash(str)] == nullptr || table[hash(str)]->getHead() == nullptr) {
     return false;
   }
   else {
-    Node *temp = table[table[hash(str)]]->getHead();
-  }
+    Node *temp = table[hash(str)]->getHead();
 
-  if (temp->getData() == str) {
-    return true;
-  }
-  else {
+    if (temp->getData() == str) {
+      return true;
+    }
     while (temp->getNext() != nullptr) {
       temp = temp->getNext();
 
@@ -59,7 +57,16 @@ bool HTable::has_key(string str) {
 }
 
 void HTable::print() {
+  for (int i = 0; i < size; i++) {
+    List *temp = table[i];
 
+    if (temp != nullptr) {
+      cout << temp->toString() << endl;
+    }
+    else {
+      cout << "nullptr" << endl;
+    }
+  }
 }
 
 HTable::~HTable() {
